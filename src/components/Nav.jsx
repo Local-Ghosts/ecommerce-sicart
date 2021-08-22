@@ -1,33 +1,39 @@
-import {Navbar,Container,Nav,NavDropdown} from "react-bootstrap"
+import {Navbar,Button,Nav,Form,FormControl,} from "react-bootstrap"
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 function NavigationBar() {
     return (
         <div>
           <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-          <Container>
+          
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#Products">Home</Nav.Link>
               
-              <NavDropdown title="Categories" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Jackets</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Shirts</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Jeans</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">T-Shirts</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.5">Shoes</NavDropdown.Item>
-                <NavDropdown.Divider />
+              <Nav.Link className="Mens">Mens</Nav.Link>
+              <Nav.Link className="Womens">Womens</Nav.Link>
+              <Nav.Link className="Shoes">Shoes</Nav.Link>
+              
                 
-              </NavDropdown>
+              
             </Nav>
+            <Form className="d-flex">
+              <FormControl
+                type="search"
+                placeholder="Search"
+                className="mr-2 "
+                aria-label="Search"
+              />
+            <Button variant="outline-success search-button">Search</Button>
+            </Form>
             <Nav>
               <Nav.Link href="#cart">Shopping Cart</Nav.Link>
               <Nav.Link href="#sign-in">SignIn</Nav.Link>
               
             </Nav>
           </Navbar.Collapse>
-          </Container>
+          
           </Navbar>
         </div>
     )
