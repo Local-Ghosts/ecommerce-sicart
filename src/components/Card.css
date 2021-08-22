@@ -1,0 +1,35 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    padding: 0 2rem;
+    color: #fff;
+}
+
+.card-img{
+    width: 100%;
+    height: 95%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px;
+}
+  
+.card-text {
+    color: black;
+    width: 100%;
+    /* height: 5%; */
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.name{
+    width: 90%;
+    margin-bottom: 15px;
+}
+  
+.price {
+    width: 10%;
+      }
