@@ -1,0 +1,28 @@
+
+.carousel{
+  max-height: 500px;
+  max-width: 98%;
+  margin-left:2%;
+}
+
+
+
+
+.img1{
+  max-width: 600px;
+  max-height: 450px;
+  object-fit: contain;
+}
+
+.displayimg1{
+  opacity: 100%;
+  color: white;
+}
+
+
+@media (max-width: 800px) {
+  .carousel{
+    max-width: 100%;
+    margin-left: 0;
+  }
+}

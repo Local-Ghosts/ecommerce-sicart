@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./productPage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./productPage.css";
 
 
 const data = {
