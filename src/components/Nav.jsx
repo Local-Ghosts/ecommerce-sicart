@@ -10,16 +10,11 @@ function NavigationBar() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#Products">Home</Nav.Link>
-              
-              <NavDropdown title="Categories" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Jackets</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Shirts</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Jeans</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">T-Shirts</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.5">Shoes</NavDropdown.Item>
-                <NavDropdown.Divider />
+              <Nav.Link>Mens</Nav.Link>
+              <Nav.Link>Womens</Nav.Link>
+              <Nav.Link>Shoes</Nav.Link>
                 
-              </NavDropdown>
+              
             </Nav>
             <Nav>
               <Nav.Link href="#cart">Shopping Cart</Nav.Link>
