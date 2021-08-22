@@ -23,8 +23,7 @@ function NavigationBar() {
             </Nav>
             <Nav>
               <Nav.Link href="#cart">Shopping Cart</Nav.Link>
-              <Nav.Link href="#sign-in">Login</Nav.Link>
-              <Nav.Link href="#sign-up">SignIn</Nav.Link>
+              <Nav.Link href="#sign-in">SignIn</Nav.Link>
               
             </Nav>
           </Navbar.Collapse>
