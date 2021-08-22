@@ -1,6 +1,6 @@
 const DATA = [
     {
-      id: 1,
+      id: 11,
       title: 'Hats',
       routeName: 'hats',
       items: [
@@ -12,7 +12,7 @@ const DATA = [
           price: 1400
         },
         {
-          id: 2,
+          id: 1,
           name: 'Blue Beanie',
           description:  "Nothing speaks more casual cool than a colourful and stylish Cap from WROGN. This solid piece will look best when styled with a graphic tee and a pair of distressed denims.",
           imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
@@ -71,7 +71,7 @@ const DATA = [
     },
     {
       
-      id: 2,
+      id: 12,
       title: 'Shoes',
       routeName: 'shoes',
       items: [
@@ -134,7 +134,7 @@ const DATA = [
       ]
     },
     {
-      id: 3,
+      id: 13,
       title: 'Jackets',
       routeName: 'jackets',
       items: [
@@ -176,7 +176,7 @@ const DATA = [
       ]
     },
     {
-      id: 4,
+      id: 14,
       title: 'Womens',
       routeName: 'womens',
       items: [
@@ -232,7 +232,7 @@ const DATA = [
       ]
     },
     {
-      id: 5,
+      id: 15,
       title: 'Mens',
       routeName: 'mens',
       items: [
@@ -282,3 +282,4 @@ const DATA = [
     }
   ]
   
+export default DATA;
