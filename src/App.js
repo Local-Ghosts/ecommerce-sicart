@@ -13,7 +13,7 @@ import NavigationBar from './components/Nav';
 function App() {
   return (
     <div className="App">
- 
+ {/* I am mad */}
 
       <NavigationBar />
       <Slider />
