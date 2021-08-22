@@ -70,9 +70,10 @@ const DATA = [
       ]
     },
     {
+      
       id: 2,
-      title: 'Sneakers',
-      routeName: 'sneakers',
+      title: 'Shoes',
+      routeName: 'shoes',
       items: [
         {
           id: 1,
