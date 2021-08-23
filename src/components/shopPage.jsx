@@ -1,6 +1,6 @@
 import React from "react";
 import Product from "./Product";
-import DATA from "./data/productData";
+import DATA from "../data/productData";
 import NavigationBar from "./NavigationBar";
 
 class ShopComponent extends React.Component{
