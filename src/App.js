@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./components/Home.js";
 import ProductPage from "./components/ProductPage.js";
-import ShopComponent from "./components/shopPage.jsx";
+import ShopPage from "./components/shopPage";
 import Account from "./components/Account";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <ProductPage></ProductPage>
         </Route>
         <Route exact path='/shop'>
-          <ShopComponent></ShopComponent>
+          <ShopPage></ShopPage>
         </Route>
         <Route exact path='/profile'>
           <Account></Account>

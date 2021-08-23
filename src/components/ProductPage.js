@@ -4,6 +4,7 @@ import "../styles/productPage.css";
 import styled from "styled-components";
 import NavigationBar from "./NavigationBar";
 import { useParams } from "react-router-dom";
+import Data from "../data/productData";
 const data = {
   img: "https://images.unsplash.com/photo-1629473728190-c9a984fed794?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1864&q=80",
   title: "Pastel Jacket With Bejewelled Collar",
@@ -16,12 +17,22 @@ function ProductPage() {
   const { id } = useParams();
   const [counter, setCounter] = useState(1);
   console.log("parms", id);
+  const a = Data.map((item) => {
+    item.items.map((i) => {
+      if (i.id == id) {
+        data.img = i.imageUrl;
+        data.title = i.name;
+        data.price = i.price * 70;
+        data.description = i.description;
+      }
+    });
+  });
   return (
     <>
       <NavigationBar></NavigationBar>
       <Container>
         <div className='d-lg-flex justify-content-center product-page'>
-          <div className='images-xsm'>
+          {/* <div className='images-xsm'>
             <div className='product-image-sm'>
               <img src={data.img} alt='' />
             </div>
@@ -31,7 +42,7 @@ function ProductPage() {
             <div className='product-image-sm'>
               <img src={data.img} alt='' />
             </div>
-          </div>
+          </div> */}
           <div className='product-image'>
             <img src={data.img} alt='' />
           </div>
@@ -40,7 +51,7 @@ function ProductPage() {
               <h1>{data.title}</h1>
             </div>
             <div>
-              <h4 className='price'>{data.price}</h4>
+              <h4 className='price'>Rs.{data.price}</h4>
             </div>
             <div className='price-buttons'>
               {" "}
