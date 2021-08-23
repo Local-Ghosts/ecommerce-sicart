@@ -47,17 +47,17 @@ function NavigationBar() {
           <Navbar.Collapse id='responsive-navbar-nav'>
             <Nav className='me-auto'>
               <li className='nav-item'>
-                <Link className='nav-link' to='/shop'>
+                <Link className='nav-link' to={`/shop/${1005}`}>
                   <a>Mens</a>
                 </Link>
               </li>
               <li className='nav-item'>
-                <Link className='nav-link' to='/shop'>
+                <Link className='nav-link' to={`/shop/${1004}`}>
                   <a>Womens</a>
                 </Link>
               </li>
               <li className='nav-item'>
-                <Link className='nav-link' to='/shop'>
+                <Link className='nav-link' to={`/shop/${1002}`}>
                   <a>Shoes</a>
                 </Link>
               </li>

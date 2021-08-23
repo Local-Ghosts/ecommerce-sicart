@@ -1,12 +1,17 @@
 import { Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import React from "react";
+import "../components/Card.css";
 function Card({ id, name, price, imageUrl, description }) {
   return (
-    <Link to={`/product/${id}`}>
-      <div className='card m-3' style={{ width: "25rem" }}>
+    <Link
+      className='link'
+      to={`/product/${id}`}
+      style={{ textDecoration: "none", color: "black" }}
+    >
+      <div className='card m-3 ' style={{ width: "25rem" }}>
         <img
-          className='card-img-top'
+          className='product-img card-img-top'
           src={imageUrl}
           alt='Card image cap'
           style={{ height: "30em", objectFit: "scale-down" }}
