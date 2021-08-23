@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/productPage.css";
 import styled from "styled-components";
 import NavigationBar from "./NavigationBar";
-
+import { useParams } from "react-router-dom";
 const data = {
   img: "https://images.unsplash.com/photo-1629473728190-c9a984fed794?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1864&q=80",
   title: "Pastel Jacket With Bejewelled Collar",
@@ -13,8 +13,9 @@ const data = {
 };
 
 function ProductPage() {
+  const { id } = useParams();
   const [counter, setCounter] = useState(1);
-
+  console.log("parms", id);
   return (
     <>
       <NavigationBar></NavigationBar>

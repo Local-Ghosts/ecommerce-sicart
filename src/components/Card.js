@@ -4,25 +4,26 @@ import React from "react";
 function Card({ id, name, price, imageUrl, description }) {
   return (
     <Link to={`/product/${id}`}>
-      <div className="card m-3" style={{ width: "18rem" }}>
+      <div className='card m-3' style={{ width: "25rem" }}>
         <img
-          className="card-img-top"
+          className='card-img-top'
           src={imageUrl}
-          alt="Card image cap"
-          style={{ height: "300px", objectFit: "scale-down" }}
+          alt='Card image cap'
+          style={{ height: "30em", objectFit: "scale-down" }}
         />
-        <div className="card-body">
-          <h5 className="card-title">{name}</h5>
+        <div className='card-body'>
+          <h5 className='card-title'>{name}</h5>
           <p>{price}$</p>
-          <p className="card-text">
-            <p className="">{description.slice(0, 70)}....</p>
+          <p className='card-text'>
+            <p className=''>{description.slice(0, 70)}....</p>
           </p>
-          <a href="#" className="btn btn-primary">
+          <a href='#' className='btn btn-primary'>
             +
           </a>
         </div>
       </div>
     </Link>
+    // </Link>
   );
 }
 export default Card;

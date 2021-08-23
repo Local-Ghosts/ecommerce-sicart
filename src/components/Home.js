@@ -17,24 +17,27 @@ const Home = () => {
 
       {/* Cards */}
 
-      <div className="container my-5">
-        <div className="row justify-content-center">
+      <ContainerGrid>
+        <div className='grid'>
           {DATA[0].items.map((item) => {
             return (
-                <Card
-                  id={item.id}
-                  name={item.name}
-                  imageUrl={item.imageUrl}
-                  price={item.price}
-                  description={item.description}
-                />
+              <Card
+                id={item.id}
+                name={item.name}
+                imageUrl={item.imageUrl}
+                price={item.price}
+                description={item.description}
+              />
             );
           })}
         </div>
-      </div>
+      </ContainerGrid>
     </>
   );
 };
 
 export default Home;
 const Container = styled.div``;
+const ContainerGrid = styled.div`
+  padding: 3em;
+`;
