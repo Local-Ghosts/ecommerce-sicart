@@ -8,7 +8,6 @@ const Home = () => {
     <Container>
       <NavigationBar></NavigationBar>
       <Slider></Slider>
-      
     </Container>
   );
 };
