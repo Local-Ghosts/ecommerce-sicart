@@ -13,9 +13,9 @@ function Card({ id, name, price, imageUrl, description }) {
         />
         <div className='card-body'>
           <h5 className='card-title'>{name}</h5>
-          <p>{price}$</p>
+          <p>Rs.{price * 70}</p>
           <p className='card-text'>
-            <p className=''>{description.slice(0, 70)}....</p>
+            <p className=''>{description}....</p>
           </p>
           <a href='#' className='btn btn-primary'>
             +
@@ -23,7 +23,6 @@ function Card({ id, name, price, imageUrl, description }) {
         </div>
       </div>
     </Link>
-    // </Link>
   );
 }
 export default Card;

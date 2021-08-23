@@ -11,11 +11,11 @@
   margin: 20px 10px;
 }
 .product-image-sm img {
-  /* object-fit: scale-down;
+  object-fit: scale-down;
     height: 180px;
-    margin: 5px; */
-  width: 100%;
-  height: 100%;
+    margin: 5px;
+  /* width: 100%;
+  height: 100%; */
 }
 .product-image-sm {
   margin: 20px 10px;
