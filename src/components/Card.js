@@ -1,8 +1,6 @@
-
 import { Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import React from "react";
-// import "./Card.css";
 function Card({ id, name, price, imageUrl, description }) {
   return (
     <Link to={`/product/${id}`}>
