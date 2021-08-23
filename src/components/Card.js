@@ -1,25 +1,10 @@
-
 import { Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import React from "react";
-// import "./Card.css";
 function Card({ id, name, price, imageUrl, description }) {
   return (
-    // <div className="Card">
-    //     <div className="card-img"
-    //     style={{
-    //         backgroundImage: `url(${imageUrl})`
-    //     }}
-    //     >
-    //     </div>
-    //     <div className="card-text">
-    //         <span className="name">{name}</span>
-    //         <span className="price">{price}</span>
-    //     </div>
-    // </div>
-    // <Link to="/product">
-      <div>
-        className="card m-3" style={{ width: "18rem" }}>
+    <Link to={`/product/${id}`}>
+      <div className="card m-3" style={{ width: "18rem" }}>
         <img
           className="card-img-top"
           src={imageUrl}
@@ -37,7 +22,7 @@ function Card({ id, name, price, imageUrl, description }) {
           </a>
         </div>
       </div>
-    // </Link>
+    </Link>
   );
 }
 export default Card;
