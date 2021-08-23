@@ -2,8 +2,24 @@
 
 .nav-bar{
   padding: 10px 0px;
-  background-color: black;
+  background-color:#5DA3FA;
   color: white;
+  font-size:1.2em;
+  font-weight: bold;
+}
+.signin{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  margin: 0px 10px;
+}
+.signout{
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+  font-size:1.3em;
 }
 
 /* popup css */
