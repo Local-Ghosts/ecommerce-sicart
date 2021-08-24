@@ -18,26 +18,26 @@ function ItemCard(props) {
 
     return (
         <div>
-            <div className="itmdet">
-                <img src="https://static.langimg.com/thumb/msid-82028507,imgsize-63684,width-700,height-525,resizemode-75/navbharat-times.jpg" alt="" width="80" height="100" />
-                <span className="data">
-                    <span className="desc">Puma Shoes</span>
-                    <span className="quant">
-                        <button className="qbtn" id="dec" onClick={() => {
+            <div className="itmdetMoh">
+                <img class="imgMoh" src="https://static.langimg.com/thumb/msid-82028507,imgsize-63684,width-700,height-525,resizemode-75/navbharat-times.jpg" alt="" width="150" height="150" />
+                <span className="dataMoh">
+                    <span className="descMoh">Puma Shoes</span>
+                    <span className="data quantMoh">
+                        <button className="qbtnMoh" id="decMoh" onClick={() => {
                             decrease()
                             props.setTotal(quant)
                             console.log(props.totalamnt);
                         }}>-</button>
                         {quant}
-                        <button className="qbtn" id="inc" onClick={() => {
+                        <button className="qbtnMoh" id="incMoh" onClick={() => {
                             increase()
                             props.setTotal(quant)
                             console.log(props.totalamnt);
                         }}>+</button>
 
                     </span>
-                    <span className="itPrice">{amount}/-</span>
-                    <button id="trash" 
+                    <span className="data itPriceMoh">{amount}/-</span>
+                    <button id="trashMoh" 
                         // onClick={() => {
                         //     const newState = state.filter((el, i) => i !== index);
                         //     setState(newState);
@@ -47,7 +47,7 @@ function ItemCard(props) {
                         </button>
                 </span>
             </div>
-            <hr className="line1"></hr>
+            <hr className="line1Moh"></hr>
 
         </div>
     )

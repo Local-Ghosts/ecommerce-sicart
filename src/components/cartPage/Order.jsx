@@ -1,28 +1,30 @@
 import React from 'react'
+import "./button.css"
 
 function Order() {
     const shipping = 50;
     return (
         <div>
-            <div className="summary">
-                <span className="order">Order Summary</span>
-                <hr class="line2"></hr>
-                <div className="mainCharges">
+            <div className="summaryMoh">
+                <span className="orderMoh">Order Summary</span>
+                <hr class="line2Moh"></hr>
+                <div className="mainChargesMoh">
                     <span>2 Products</span>
-                    <span className='tmoney'>17998/-</span></div>
+                    <span className='tmoneyMoh'>17998/-</span></div>
                 <div>
-                    <div id='plus'>+</div>
+                    <div id='plusMoh'>+</div>
                     <div>
-                        <span className="scharges">Shipping Charges</span>
-                        <span className='smoney'>{shipping}/-</span>
-                        <hr className="line2"></hr>
+                        <span className="schargesMoh">Shipping Charges</span>
+                        <span className='smoneyMoh'>{shipping}/-</span>
+                        <hr className="line2Moh"></hr>
                     </div>
-                    <div className="sum">
-                        <span id='sum'> Total Charges</span>
-                        <span className='fsum'>18048/-</span>
+                    <div className="sumMoh">
+                        <span id='sumMoh'> Total Charges</span>
+                        <span className='fsumMoh'>18048/-</span>
                     </div>
                 </div>
-                <button className='checkout'>Checkout</button>
+                <input type="checkbox" name="button" id="button"></input>
+                <label class="checkout" for="button">Checkout</label>
             </div>
         </div>
     )

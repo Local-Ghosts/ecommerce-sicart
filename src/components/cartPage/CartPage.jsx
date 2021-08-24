@@ -1,24 +1,26 @@
 import React, {useState} from "react";
 import ItemCard from "./ItemCard";
 import Order from "./Order";
+import "./cartpage.css"
 
 const CartPage = () => {
 
 const [totalamnt, setTotal] = useState();
 
   return (
-    <div className="container">
-      <div className="page">
+    <div>
+    <h1 className="bagMoh">Your Bag</h1>
+    <div className="containerMoh">
+      <div className="pageMoh">
         
-        <div className="grid">
-          <div className="details">
-            <span className="products">Products</span>
-            <span className="desc">Description</span>
-            <span className="quantity">Quantity</span>
-            <span className="price">Price</span>
-            <span className="delete">Delete</span>
-            <hr className="line1"></hr>
-            <ItemCard setTotal={setTotal} totalamnt={totalamnt}/>
+        <div className="gridMoh">
+          <div className="detailsMoh">
+            <span className="tbl productsMoh">Products</span>
+            <span className="tbl descpMoh">Description</span>
+            <span className="tbl quantityMoh">Quantity</span>
+            <span className="tbl priceMoh">Price</span>
+            <span className="tbl deleteMoh">Delete</span>
+            <hr className="line1Moh"></hr>
             <ItemCard setTotal={setTotal} totalamnt={totalamnt}/>
             <ItemCard setTotal={setTotal} totalamnt={totalamnt}/>
             <ItemCard setTotal={setTotal} totalamnt={totalamnt}/>
@@ -29,6 +31,7 @@ const [totalamnt, setTotal] = useState();
           
         </div>
       </div>
+    </div>
     </div>
   );
 };
