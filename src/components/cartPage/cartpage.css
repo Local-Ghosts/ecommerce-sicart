@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lobster", cursive;
+}
+
+body {
+  background-color: #EAEDED;
+}
+
+hr.line1Moh {
+  border: 0.5px solid black;
+  background-color: black;
+  margin-left: 2.2rem;
+  width: 40rem;
+  margin-top: 0.3rem;
+}
+
+hr.line2Moh {
+  border: 0.5px solid black;
+  background-color: black;
+  margin-left: 5rem;
+  width: 19rem;
+  margin-top: 0.3rem;
+}
+
+.bagMoh {
+  text-align: center;
+  position: relative;
+  margin-top: 1rem;
+  font-weight: bolder;
+  font-size: 2.5rem;
+}
+
+.containerMoh {
+  margin: auto;
+  margin-top: 2rem;
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  background-color: #eaeded;
+  width: 100%;
+  
+}
+
+.pageMoh {
+  margin: auto;
+  width: 80rem;
+  background-color: white;
+  border-radius: 15px;
+  padding-bottom: 1rem;
+}
+
+.detailsMoh {
+  position: relative;
+  margin-top: 2.5rem;
+  margin-left: 2rem;
+}
+
+.gridMoh {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.tbl {
+  margin-left: 4.8rem;
+}
+
+.descpMoh{
+  margin-left: 5.8rem;
+}
+
+.quantityMoh, .priceMoh, .deleteMoh {
+  margin-left: 4rem;
+}
+
+.summaryMoh {
+  margin-top: 2.5rem;
+  margin-left: 10rem;
+}
+ .orderMoh {
+    margin-left: 5rem;
+}
+ /* 1244, 1269 */
+ @media only screen and (max-width: 1400px) {
+  .gridMoh {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .detailsMoh {
+    display: flex;
+    flex-direction: column;
+   }
+}
+
+.imgMoh {
+  border: 1px solid black;
+  padding: 2px;
+  margin-top: 1.2rem;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+  
+.itmdetMoh {
+  display: flex;
+  flex-direction: row;
+  margin-top: -1rem;
+  margin-bottom: 0.7rem;
+}
+
+.dataMoh {
+  margin-top: 3rem;
+  margin-left: 3.2rem;
+}
+
+
+.itPriceMoh {
+  margin-left: 3.8rem;
+}
+
+.quantMoh{
+  margin-left: 4.3rem;
+}
+
+.mainChargesMoh {
+  margin-top: 1rem;
+  margin-left: 5rem;
+  margin-bottom: 0.8rem;
+}
+
+.schargesMoh {
+  margin-left: 4.8rem;
+}
+
+.tmoneyMoh {
+  margin-left: 10rem;
+}
+.smoneyMoh {
+  margin-left: 8rem;
+  margin-top: 1rem;
+}
+
+#plusMoh {
+  font-size: 2rem;
+  margin-left: 21rem;
+  margin-bottom: 1rem;
+}
+
+.sumMoh {
+  margin-top: 1rem;
+  padding: 1rem;
+  padding-bottom: 2.7rem;
+  width: 19rem;
+  height: 3rem;
+  margin-left: 5rem;
+  background-color: #5DA3FA;
+  border-radius: 0.5rem;
+}
+
+.fsumMoh {
+  margin-left: 7.1rem;
+  
+}
+
+#sumMoh {
+  margin-left: -0.5rem;
+}
+
+.checkoutMoh {
+  margin-left: 5rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  height: 3.5rem;
+  width: 19rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  color: white;
+  background-color: #2b7ee4;
+}
+
+.checkoutMoh:hover, #trashMoh:hover,#incMoh:hover, #decMoh:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.qbtnMoh {
+  width: 1.2rem;
+  font-size: 15px;
+  font-weight: bolder;
+  padding: 1px;
+}
+
+#decMoh {
+  margin-right: 0.5rem;
+}
+#incMoh {
+  margin-left: 0.5rem;
+}
+
+#trashMoh{
+  margin-left: 3.5rem;
+  position: absolute;
+  margin-top: -2px;
+  color: red;
+  padding-right: 0.5px;
+  width: 1.5rem;
+  font-size: 1.2rem;
+  border-style: none;
+  background-color: white;
+  
+}
+
+

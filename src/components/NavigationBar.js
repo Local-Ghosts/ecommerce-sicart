@@ -73,7 +73,9 @@ function NavigationBar() {
               </li>
             </Nav>
             <Nav>
-              <Nav.Link href="#cart">Shopping Cart</Nav.Link>
+            <Link className='nav-link' to='/cart'>
+                  <a>Cart</a>
+                </Link>
               {console.log("uaser mae", userName == "")}
               {userName != "" ? (
                 <Popup
