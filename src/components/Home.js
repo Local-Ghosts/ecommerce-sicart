@@ -18,7 +18,7 @@ const Home = () => {
       {/* Cards */}
 
       <ContainerGrid>
-        <div className='grid'>
+        <div className='grid justify-content-center'>
           {DATA[0].items.map((item) => {
             return (
               <Card
@@ -27,6 +27,7 @@ const Home = () => {
                 imageUrl={item.imageUrl}
                 price={item.price}
                 description={item.description}
+                category={DATA[0].routeName} 
               />
             );
           })}

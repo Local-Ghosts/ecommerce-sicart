@@ -80,7 +80,7 @@ function ProductPage() {
                   +
                 </button>
               </div>
-              <button className='add-to-cart'>ADD TO CART</button>
+              <button className='add-to-cart' style={{backgroundColor:"#47bcd4", border: "none"}}>ADD TO CART</button>
             </div>
 
             <div className='description'>

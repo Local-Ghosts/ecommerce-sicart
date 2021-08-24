@@ -2,16 +2,21 @@ import React from "react";
 import Data from "../data/productData";
 import Product from "../components/Product";
 import NavigationBar from "../components/NavigationBar";
-const shopPage = () => {
+import { useParams } from "react-router-dom";
+
+const ShopPage = () => {
+  const { id } = useParams();
   return (
     <div>
-      {console.log("shop")}
       <NavigationBar></NavigationBar>
-      {Data.map((item) => (
-        <Product key={item.id} title={item.title} items={item.items} />
-      ))}
+      <Product
+        key={Data[id - 1001].id}
+        title={Data[id - 1001].title}
+        items={Data[id - 1001].items}
+        category={Data[id - 1001].routeName}
+      />
     </div>
   );
 };
 
-export default shopPage;
+export default ShopPage;

@@ -1,25 +1,28 @@
 import { Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import React from "react";
-function Card({ id, name, price, imageUrl, description }) {
+import "./Card.css";
+function Card({ id, name, price, imageUrl, description, category }) {
   return (
-    <Link to={`/product/${id}`}>
-      <div className='card m-3' style={{ width: "25rem" }}>
-        <img
-          className='card-img-top'
-          src={imageUrl}
-          alt='Card image cap'
-          style={{ height: "30em", objectFit: "scale-down" }}
-        />
-        <div className='card-body'>
-          <h5 className='card-title'>{name}</h5>
-          <p>Rs.{price * 70}</p>
-          <p className='card-text'>
-            <p className=''>{description}....</p>
-          </p>
-          <Link to ="/cart"><a href='#' className='btn btn-primary'>
-            +
-          </a></Link>
+    <Link
+      className="link"
+      to={`/product/${id}`}
+      style={{ textDecoration: "none", color: "black" }}
+    >
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <img src={imageUrl} alt="rover" />
+          </div>
+          <div class="card-body">
+            <span class="tag tag-teal">{category}</span>
+            <h4>{name}</h4>
+            <h7>Rs. {price * 70}</h7>
+            <p>{description.slice(0, 70)}...</p>
+            <div className="add-btn">
+              <button className="add-to-cart-home">ADD TO CART</button>
+            </div>
+          </div>
         </div>
       </div>
     </Link>

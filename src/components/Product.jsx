@@ -3,7 +3,7 @@ import React from "react";
 import Card from "./Card";
 import Carousel from "react-elastic-carousel";
 
-function Product({ title, items }) {
+function Product({ title, items, category }) {
   console.log("ITEMS", items);
   console.log("TITle", title);
   const breakPoints = [
@@ -29,6 +29,8 @@ function Product({ title, items }) {
             name={i.name}
             price={i.price}
             imageUrl={i.imageUrl}
+            description={i.description}
+            category={category}
           ></Card>
         ))}
       </Carousel>
