@@ -4,7 +4,6 @@ const initialState = {
     mycart=[],
     totalPrice=0,
 };
-
 const cartSlices = createSlice({
     name: "basket",
     initialState,
