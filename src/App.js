@@ -4,6 +4,8 @@ import Home from "./components/Home.js";
 import ProductPage from "./components/ProductPage.js";
 import ShopPage from "./components/shopPage";
 import Account from "./components/Account";
+import CartPage from "./components/cartPage/CartPage"
+
 import "./App.css";
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
         </Route>
         <Route exact path='/profile'>
           <Account></Account>
+        </Route>
+        <Route exact path='/cart'>
+          <CartPage></CartPage>
         </Route>
       </Switch>
     </Router>
