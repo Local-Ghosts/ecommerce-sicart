@@ -68,8 +68,6 @@
 }
 .carousel {
   max-height: 500px;
-  /* max-width: 98%;
-  margin-left:2%; */
   width: 100%;
 }
 
@@ -88,9 +86,6 @@
 }
 
 .img1 {
-  /* max-width: 600px;
-  max-height: 450px;
-  object-fit: contain; */
   width: 100%;
 }
 .img1 img {
@@ -113,15 +108,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-between; */
-  /* height: 80vh; */
 }
 .title {
   font-size: 28px;
   margin-bottom: 25px;
 }
-
-/* .preview {
-    display: flex;
-    justify-content: space-between;
-} */

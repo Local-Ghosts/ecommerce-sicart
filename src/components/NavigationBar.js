@@ -33,64 +33,65 @@ function NavigationBar() {
     });
   };
   return (
-    <div className='nav-bar'>
-      <Navbar collapseOnSelect expand='lg' variant='dark'>
+    <div className="nav-bar">
+      <Navbar collapseOnSelect expand="lg" variant="dark">
         <Container>
           <Link
-            to='/'
-            className='navbar-brand animate__animated animate__bounce'
+            to="/"
+            className="navbar-brand animate__animated animate__bounce"
             style={{ fontSize: "1.3em" }}
           >
             Sicart
           </Link>
-          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-          <Navbar.Collapse id='responsive-navbar-nav'>
-            <Nav className='me-auto'>
-              <li className='nav-item'>
-                <Link className='nav-link' to={`/shop/${1005}`}>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <li className="nav-item">
+                <Link className="nav-link" to={`/shop/${1005}`}>
                   <a>Mens</a>
                 </Link>
               </li>
-              <li className='nav-item'>
-                <Link className='nav-link' to={`/shop/${1004}`}>
+              <li className="nav-item">
+                <Link className="nav-link" to={`/shop/${1004}`}>
                   <a>Womens</a>
                 </Link>
               </li>
-              <li className='nav-item'>
-                <Link className='nav-link' to={`/shop/${1002}`}>
+              <li className="nav-item">
+                <Link className="nav-link" to={`/shop/${1002}`}>
                   <a>Shoes</a>
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={`/shop/${1001}`}>
+                  <a>Hats</a>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={`/shop/${1003}`}>
+                  <a>Jackets</a>
+                </Link>
+              </li>
             </Nav>
-            {/* <Form className='d-flex'>
-              <FormControl
-                type='search'
-                placeholder='Search'
-                className='mr-2 '
-                aria-label='Search'
-              />
-              <Button variant='outline-success search-button'>Search</Button>
-            </Form> */}
             <Nav>
-              <Nav.Link href='#cart'>Shopping Cart</Nav.Link>
+              <Nav.Link href="#cart">Shopping Cart</Nav.Link>
               {console.log("uaser mae", userName == "")}
               {userName != "" ? (
                 <Popup
                   trigger={(open) => (
                     <UserImage onClick={() => {}} src={userPhoto}></UserImage>
                   )}
-                  position='bottom center'
+                  position="bottom center"
                   closeOnDocumentClick
                 >
-                  <div className='container'>
-                    <button className='signout' onClick={signOut}>
+                  <div className="container">
+                    <button className="signout" onClick={signOut}>
                       Sign Out
                     </button>
-                    <Link to='/profile'>Profile</Link>
+                    <Link to="/profile">Profile</Link>
                   </div>
                 </Popup>
               ) : (
-                <Nav.Link href='#cart'>
+                <Nav.Link href="#cart">
                   <SignInPopUp></SignInPopUp>
                 </Nav.Link>
               )}
