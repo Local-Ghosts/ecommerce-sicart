@@ -10,13 +10,22 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     setUserLogin: (state, action) => {
-      console.log("signin is aclled",action);
+      console.log("signin is aclled", action);
+      
+
       state.name = action.payload.name;
       state.email = action.payload.email;
       state.photo = action.payload.photo;
+      let user = [];
+      if (localStorage.getItem("user")) {
+        user = JSON.parse(localStorage.getItem("user"));
+      }
+      user.push(action.payload)
+      localStorage.setItem("user", JSON.stringify(user));
     },
     setUserSignout: (state, action) => {
       console.log("signout is aclled");
+      localStorage.removeItem("user", JSON.stringify(action.payload));
       state.name = "";
       state.email = "";
       state.photo = "";
