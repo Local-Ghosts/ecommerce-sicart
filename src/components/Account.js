@@ -1,17 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/acoount.css";
 import NavigationBar from "./NavigationBar";
-import {
-  selectUserName,
-  selectUserPhoto,
-  selectUserEmail,
-} from "../redux/auth/AuthSlice";
-import { useSelector, useDispatch } from "react-redux";
 const Account = () => {
-  const userEmail = useSelector(selectUserEmail);
-  const userName = useSelector(selectUserName);
-  const userPhoto = useSelector(selectUserPhoto);
-  const dispatch = useDispatch();
+  const [value, setvalue] = useState({
+    userName: "",
+    userEmail: "",
+    userPhoto: "",
+  });
+  const { userName, userEmail, userPhoto } = value;
+  const isAuthenated = () => {
+    if (typeof window !== undefined) {
+      if (localStorage.getItem("user")) {
+        const data = JSON.parse(localStorage.getItem("user"));
+        console.log("UserData :", data);
+        setvalue({
+          userName: data[0].name,
+          userEmail: data[0].email,
+          userPhoto: data[0].photo,
+        });
+      }
+    }
+  };
+  useEffect(() => {
+    isAuthenated();
+  }, []);
   return (
     <>
       <NavigationBar></NavigationBar>
