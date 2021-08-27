@@ -4,8 +4,11 @@ import styled from "styled-components";
 import { setUserLogin } from "../redux/auth/AuthSlice";
 import { auth, provider } from "../firebase";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 const SignInPopUp = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
+
   const signIn = () => {
     auth.signInWithPopup(provider).then((data) => {
       let user = data.user;
@@ -16,6 +19,7 @@ const SignInPopUp = () => {
           photo: user.photoURL,
         })
       );
+      history.push("/profile");
       console.log("user", user);
     });
   };

@@ -19,13 +19,15 @@ export const loadCart = () => {
 };
 
 export const removeItemFromCart = (productId) => {
+  console.log("remove cart", productId);
   let cart = [];
   if (typeof window !== undefined) {
     if (localStorage.getItem("cart")) {
       cart = JSON.parse(localStorage.getItem("cart"));
     }
+    console.log("cart", cart);
     cart.map((product, i) => {
-      if (product._id == productId) {
+      if (product.id == productId) {
         cart.splice(i, 1);
       }
     });

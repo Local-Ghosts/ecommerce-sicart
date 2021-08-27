@@ -3,8 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/productPage.css";
 import styled from "styled-components";
 import NavigationBar from "./NavigationBar";
-import { useParams } from "react-router-dom";
+import { Redirect, useParams } from "react-router-dom";
 import Data from "../data/productData";
+import { addItemToCart } from "./cartPage/cart_helper";
 const data = {
   img: "https://images.unsplash.com/photo-1629473728190-c9a984fed794?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1864&q=80",
   title: "Pastel Jacket With Bejewelled Collar",
@@ -12,7 +13,6 @@ const data = {
   description:
     "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
 };
-
 function ProductPage() {
   const { id } = useParams();
   const [counter, setCounter] = useState(1);
@@ -27,22 +27,31 @@ function ProductPage() {
       }
     });
   });
+  const [redirect, setredirect] = useState(false);
+  const addItem = () => {
+    addItemToCart(
+      {
+        id: data.id,
+        name: data.title,
+        price: data.price,
+        imageUrl: data.img,
+        description: data.description,
+        category: data.category,
+      },
+      () => setredirect(true)
+    );
+  };
+  const getaRedirect = () => {
+    if (redirect) {
+      return <Redirect to='/cart' />;
+    }
+  };
   return (
     <>
+      {getaRedirect(redirect)}
       <NavigationBar></NavigationBar>
       <Container>
         <div className='d-lg-flex justify-content-center product-page'>
-          {/* <div className='images-xsm'>
-            <div className='product-image-sm'>
-              <img src={data.img} alt='' />
-            </div>
-            <div className='product-image-sm'>
-              <img src={data.img} alt='' />
-            </div>
-            <div className='product-image-sm'>
-              <img src={data.img} alt='' />
-            </div>
-          </div> */}
           <div className='product-image'>
             <img src={data.img} alt='' />
           </div>
@@ -80,7 +89,13 @@ function ProductPage() {
                   +
                 </button>
               </div>
-              <button className='add-to-cart' style={{backgroundColor:"#47bcd4", border: "none"}}>ADD TO CART</button>
+              <button
+                className='add-to-cart'
+                style={{ backgroundColor: "#47bcd4", border: "none" }}
+                onClick={addItem}
+              >
+                ADD TO CART
+              </button>
             </div>
 
             <div className='description'>
