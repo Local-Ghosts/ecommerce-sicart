@@ -24,6 +24,7 @@
     "react-responsive-carousel": "^3.2.21",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-top-loading-bar": "^2.0.1",
     "reactjs-popup": "^2.0.5",
     "redux": "^4.1.1",
     "sass": "^1.38.1",

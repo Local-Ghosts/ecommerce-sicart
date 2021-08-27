@@ -11,7 +11,7 @@ import React, { useEffect, useState } from "react";
 import "animate.css";
 import { auth, provider } from "../firebase";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "../App.css";
 import "reactjs-popup/dist/index.css";
 import SignInPopUp from "../components/SignInPopUp.js";
@@ -23,15 +23,20 @@ import {
 } from "../redux/auth/AuthSlice";
 import { useSelector, useDispatch } from "react-redux";
 function NavigationBar() {
+  const history = useHistory();
   const [name, setName] = useState("");
   const [photo, setPhoto] = useState("");
   const [isSignout, setIsSignout] = useState(false);
   const dispatch = useDispatch();
   const signOut = () => {
+    console.log("signout ");
     auth.signOut().then(() => {
       dispatch(setUserSignout());
-      setIsSignout(true);
     });
+    history.push("/");
+    setTimeout(() => {
+      window.location.reload(true);
+    }, 1000);
   };
   const isAuthenated = () => {
     if (typeof window !== undefined) {
@@ -44,9 +49,11 @@ function NavigationBar() {
     }
     console.log("is auth method", name);
   };
+  console.log("isSignout ::", isSignout);
   useEffect(() => {
+    console.log("signout use effect");
     isAuthenated();
-  }, []);
+  }, [isSignout]);
   return (
     <div className='nav-bar'>
       <Navbar collapseOnSelect expand='lg' variant='dark'>
@@ -88,9 +95,11 @@ function NavigationBar() {
               </li>
             </Nav>
             <Nav>
-              <Link className='nav-link' to='/cart'>
-                <a>Cart</a>
-              </Link>
+              {name && (
+                <Link className='nav-link' to='/cart'>
+                  <a>Cart</a>
+                </Link>
+              )}
               {console.log(name + "photo AT line 93" + photo)}
               {name != "" ? (
                 <Popup
