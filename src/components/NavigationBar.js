@@ -29,7 +29,6 @@ function NavigationBar() {
   const [isSignout, setIsSignout] = useState(false);
   const dispatch = useDispatch();
   const signOut = () => {
-    console.log("signout ");
     auth.signOut().then(() => {
       dispatch(setUserSignout());
     });
@@ -42,16 +41,12 @@ function NavigationBar() {
     if (typeof window !== undefined) {
       if (localStorage.getItem("user")) {
         const data = JSON.parse(localStorage.getItem("user"));
-        console.log("UserData :", data);
         setName(data[0].name);
         setPhoto(data[0].photo);
       }
     }
-    console.log("is auth method", name);
   };
-  console.log("isSignout ::", isSignout);
   useEffect(() => {
-    console.log("signout use effect");
     isAuthenated();
   }, [isSignout]);
   return (
@@ -100,7 +95,6 @@ function NavigationBar() {
                   <a>Cart</a>
                 </Link>
               )}
-              {console.log(name + "photo AT line 93" + photo)}
               {name != "" ? (
                 <Popup
                   trigger={(open) => (
