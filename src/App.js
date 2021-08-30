@@ -4,27 +4,31 @@ import Home from "./components/Home.js";
 import ProductPage from "./components/ProductPage.js";
 import ShopPage from "./components/shopPage";
 import Account from "./components/Account";
-import CartPage from "./components/cartPage/CartPage"
+import CartPage from "./components/cartPage/CartPage";
+import CheckoutSuccess from "./components/CheckoutSuccess.jsx";
 
 import "./App.css";
 function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path='/'>
+        <Route exact path="/">
           <Home></Home>
         </Route>
-        <Route exact path='/product/:id'>
+        <Route exact path="/product/:id">
           <ProductPage></ProductPage>
         </Route>
-        <Route exact path='/shop/:id'>
+        <Route exact path="/shop/:id">
           <ShopPage></ShopPage>
         </Route>
-        <Route exact path='/profile'>
+        <Route exact path="/profile">
           <Account></Account>
         </Route>
-        <Route exact path='/cart'>
+        <Route exact path="/cart">
           <CartPage></CartPage>
+        </Route>
+        <Route exact path="/checkoutsuccess">
+          <CheckoutSuccess></CheckoutSuccess>
         </Route>
       </Switch>
     </Router>

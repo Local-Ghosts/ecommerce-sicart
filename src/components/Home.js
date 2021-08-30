@@ -6,8 +6,6 @@ import DATA from "../data/productData";
 import Card from "./Card";
 
 const Home = () => {
-  console.log("home");
-  console.log(DATA[0].items);
   return (
     <>
       <Container>

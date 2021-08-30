@@ -4,41 +4,43 @@ import Order from "./Order";
 import "./cartpage.css";
 import { loadCart } from "./cart_helper";
 import NavigationBar from "../NavigationBar";
+
 const CartPage = () => {
-  const [totalamnt, setTotal] = useState();
   const [products, setproducts] = useState([]);
   const [reload, setreload] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
-  const getTotalPrice = () => {
-    let temp = 0;
-    products.forEach((product) => {
-      temp += product.price;
-    });
-    setTotalPrice(temp);
-    console.log("Total price: " + totalPrice);
-  };
+  const [orderSuccess, setOrderSuccess] = useState(false);
+
+
+
   useEffect(() => {
-    console.log("reload");
     setproducts(loadCart());
   }, [reload]);
+
   useEffect(() => {
-    getTotalPrice();
-  });
+    if (products) {
+      var temp_price = 0;
+      for (let i = 0; i < products.length; i++) {
+        temp_price += products[i].price;
+      }
+      setTotalPrice(temp_price);
+    }
+  }, [products]);
+
   return (
     <div>
       <NavigationBar></NavigationBar>
-      <h1 className='bagMoh'>Your Bag</h1>
-      <div className='containerMoh'>
-        <div className='pageMoh'>
-          <div className='gridMoh'>
-            <div className='detailsMoh'>
-              <span className='tbl productsMoh'>Products</span>
-              <span className='tbl descpMoh'>Description</span>
-              {/* <span className='tbl quantityMoh'>Quantity</span> */}
-              <span className='tbl priceMoh'>Price</span>
-              <span className='tbl deleteMoh'>Delete</span>
-              <hr className='line1Moh'></hr>
-              {products.length ? (
+      <h1 className="bagMoh">Your Bag</h1>
+      <div className="containerMoh">
+        <div className="pageMoh">
+          <div className="gridMoh">
+            <div className="detailsMoh">
+              <span className="tbl productsMoh">Products</span>
+              <span className="tbl descpMoh">Description</span>
+              <span className="tbl priceMoh">Price</span>
+              <span className="tbl deleteMoh">Delete</span>
+              <hr className="line1Moh"></hr>
+              {products && products.length ? (
                 products.map((product) => {
                   return (
                     <div>
@@ -55,10 +57,11 @@ const CartPage = () => {
                 <h1>Cart is empty</h1>
               )}
             </div>
-            {products.length && (
+            {products && products.length && (
               <Order
-                totalPrice={totalPrice}
+                totalPrice={totalPrice * 70}
                 numberOfProducts={products.length}
+                setproducts={setproducts}
               />
             )}
           </div>
